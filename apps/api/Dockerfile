@@ -1,10 +1,14 @@
-FROM python:3.11-slim
+import os
+from dotenv import load_dotenv
+from langchain_groq import ChatGroq
 
-WORKDIR /app
+load_dotenv()
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+def get_llm():
+    return ChatGroq(
+        model="llama-3.3-70b-versatile",
+        api_key=os.getenv("GROQ_API_KEY"),
+        temperature=0.2,
+    )
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
