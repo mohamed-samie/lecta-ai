@@ -21,6 +21,7 @@ Instead of producing random quizzes, Lecta AI analyzes lecture files, retrieves 
 
 - Lecture-based question generation
 - Professor-style exam generation
+- Previous-exam style matching (upload a past exam to mirror its question style)
 - RAG-based content grounding
 - Schema-constrained LLM outputs
 - In-browser exam solving experience
@@ -34,8 +35,9 @@ Instead of producing random quizzes, Lecta AI analyzes lecture files, retrieves 
 **Backend:** FastAPI  
 **Async Processing:** Celery, Redis  
 **Vector Search:** Sentence-Transformers embeddings + cosine similarity  
-**LLM / AI:** LangChain, Groq  
+**LLM / AI:** LangChain, Groq (Llama 3.3 70B), Pydantic-validated outputs  
 **Database:** PostgreSQL / Supabase  
+**Containers:** Docker Compose (API, Celery worker, Redis)  
 **Deployment:** Vercel
 
 ## Architecture
@@ -70,16 +72,15 @@ The MVP includes the core full exam flow and UI foundation.
 
 Planned improvements:
 
-- Previous exam style analysis
 - More advanced grading rubrics
 - Better lecture parsing for PDFs and slides
 - Student performance dashboard
 - More detailed revision recommendations
 - Background job monitoring
 
-## Live Demo
+## Demo Video
 
-[View Live Demo](https://youtu.be/K0oL6rwVgNU?si=2eyWtiRRzcWAS7On)
+[Watch the demo](https://youtu.be/K0oL6rwVgNU?si=2eyWtiRRzcWAS7On)
 
 ## Author
 
