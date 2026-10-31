@@ -23,3 +23,5 @@ venv/
 
 # temp
 tmp/
+apps/api/uploads/
+*.db
