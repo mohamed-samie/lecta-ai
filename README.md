@@ -33,7 +33,7 @@ Instead of producing random quizzes, Lecta AI analyzes lecture files, retrieves 
 **Frontend:** Next.js, TypeScript  
 **Backend:** FastAPI  
 **Async Processing:** Celery, Redis  
-**Vector Search:** pgvector  
+**Vector Search:** Sentence-Transformers embeddings + cosine similarity  
 **LLM / AI:** LangChain, Groq  
 **Database:** PostgreSQL / Supabase  
 **Deployment:** Vercel
@@ -46,7 +46,7 @@ Lecture parsing and preprocessing
 ↓  
 Text chunking and embeddings  
 ↓  
-Vector storage with pgvector  
+Embeddings stored with each chunk (cosine similarity search)  
 ↓  
 RAG retrieval over lecture content  
 ↓  
