@@ -37,8 +37,7 @@ Instead of producing random quizzes, Lecta AI analyzes lecture files, retrieves 
 **Vector Search:** Sentence-Transformers embeddings + cosine similarity  
 **LLM / AI:** LangChain, Groq (Llama 3.3 70B), Pydantic-validated outputs  
 **Database:** PostgreSQL / Supabase  
-**Containers:** Docker Compose (API, Celery worker, Redis)  
-**Deployment:** Vercel
+**Containers:** Docker Compose (API, Celery worker, Redis)
 
 ## Architecture
 
@@ -80,7 +79,7 @@ Planned improvements:
 
 ## Demo Video
 
-[Watch the demo](https://youtu.be/K0oL6rwVgNU?si=2eyWtiRRzcWAS7On)
+[Watch the demo](https://youtu.be/K0oL6rwVgNU)
 
 ## Author
 
